@@ -50,19 +50,19 @@ const DirectorsSection = () => {
 ]
 
 	return (
-		<section className="directors-section">
+		<section className="directors-section margin-top mb-5 md:mb-10">
         <div className="wrapper">
 					 <WhiteBlueText text="Meet Our Board of Directors" />
-					 <div className="dirctors-list grid grid-cols-2 gap-x-8 gap-y-10 pt-10">
+					 <div className="dirctors-list grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 pt-7">
             {Directors_list.map((director, index) => (
               <div className="director-card grid grid-cols-3 gap-5.5" key={index}>
                 <figure className='col-span-1'>
-                  <img src={director.image} alt={director.name} className='h-42 rounded-xl'/>
+                  <img src={director.image} alt={director.name} className='h-42 rounded-xl w-full'/>
                 </figure>
-                <div className="director-info col-span-2">
-                  <h3>{director.name}</h3>
-                  <p className="designation">{director.designation}</p>
-                  <p className="description">{director.description}</p>
+                <div className="director-info col-span-2 grid py-2">
+                  <span className="designation text-sm font-semibold">{director.designation}</span>
+                  <span className='text-2xl font-bold'>{director.name}</span>
+                  <span className="description  text-sm">{director.description}</span>
                   <a href={director.link} className="read-more">Read More</a>		
               </div>
               </div>

@@ -1,215 +1,15 @@
 @import "tailwindcss";
 
-
-/* ==========================================================================
-   1. CSS Reset Code
-   ========================================================================== */
-
-/* 1.1. Eric Meyers Reset
-   http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-   ========================================================================== */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-/* Force scrollbar */
-html {
-  overflow-y: scroll;
-}
-
-/* Align radios and text inputs with their label */
-
-input[type='radio'] {
-  vertical-align: text-bottom;
-}
-
-/* Hand cursor on clickable input elements */
-label,
-input[type='button'],
-input[type='submit'],
-button {
-  cursor: pointer;
-}
-
-strong {
-  font-weight: bold;
-  font-family: inherit;
-  font-size: inherit;
-}
-
-em {
-  font-style: italic;
-}
-
-img {
-  width: 100%;
-  border: 0;
-  vertical-align: middle;
-}
-
-sub,
-sup {
-  vertical-align: baseline;
-  position: relative;
-  font-size: 55%;
-  line-height: 0;
-}
-
-sup {
-  top: -0.7em;
-}
-sub {
-  bottom: -0.25em;
-}
-
-/* 1.2. Clear Fix
-   ========================== */
-
-.cf:before,
-.cf:after {
-  display: table;
-  content: ' ';
-}
-
-.cf:after {
-  clear: both;
-}
-
-/*for all*/
-body {
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-li {
-  display: inline-block;
-  list-style-type: none;
-}
-
 /*for wrapper*/
 .wrapper {
   max-width: 1920px;
   width: 94%;
   margin: 0 auto;
 }
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+
+img{
+  width: 100%;
 }
-
-/* ===========================================================  */
-
-/* ================================================ */
 
 .about-banner {
   width: 100%;
@@ -280,9 +80,7 @@ h3 {
 }
 
 .image-content-div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @apply flex justify-between items-center flex-col-reverse md:flex-row gap-y-5 md:gap-y-0 ;
 }
 .bigger-width {
   flex-basis: 58.5%;
@@ -292,24 +90,21 @@ h3 {
 }
 
 .heading-para {
-  line-height: 1.6;
-  font-size: 17px;
+  @apply text-lg
 }
 
 .heading-para p {
-  font-weight: 500;
+  @apply text-lg;
 }
 
 h4 {
-  font-weight: bolder;
+  @apply text-xl font-bold;
 }
 .image-content h3 {
   font-weight: bolder;
 }
 .content-side {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  @apply flex flex-col gap-1;
 }
 .gray-background {
   background: #f4f5f7;
@@ -361,15 +156,15 @@ h4 {
 }
 
 .left-align {
-  flex-direction: row;
+  @apply flex-col md:flex-row;
 }
 
 .right-align {
-  flex-direction: row-reverse;
+ @apply flex-col-reverse md:flex-row-reverse;
 }
 
 .margin-top {
-  margin-top: 35px;
+ @apply mt-5 md:mt-9;
 }
 
 .colorBlack {
@@ -434,10 +229,7 @@ h4 {
 }
 
 .explore {
-  background-image: url(../public/sectionBackground.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 50px;
+  @apply bg-[url('../public/sectionBackground.png')] bg-contain bg-no-repeat mb-12 ;
 }
 
 @media only screen and (min-width: 1281px) {

@@ -29,7 +29,7 @@ const IconComponent = ({ iconList = [], data }) => {
               (img) => img.id === item.fields.iconImg.sys.id
             );
             return (
-              <li className="icons" key={index}>
+              <li className="icons w-[29.67%] md:w-2/12" key={index}>
                 <img
                   src={image ? image.url : ''}
                   alt={item.fields.iconName}

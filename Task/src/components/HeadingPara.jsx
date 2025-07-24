@@ -8,7 +8,7 @@ const HeadingPara = ({ headingParagraphList }) => {
         headingParagraphList.map((item, index) => {
           const { fields } = item || {};
           return (
-            <div key={index} className="single-heading-para">
+            <div key={index} className="single-heading-para pb-1.5">
               {fields?.heading && <h4>{fields.heading}</h4>}
               {fields?.paragraph && <p>{fields.paragraph}</p>}
             </div>
