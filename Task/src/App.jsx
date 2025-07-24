@@ -110,14 +110,14 @@ function App() {
       <main >
         <Banner getContentData={getContentData('banner', 0)} />
         <ImageContent
-          getContentData={getContentData('heading', 2)}
+          getContentData={getContentData('heading', 0)}
           contentWidth={`bigger`}
           figureWidth={`smaller`}
-          alignment={`left`}
+          additionalClass={`gray-background`}
           additionalClassDiv={`margin-top`}
         />
-        <ImageContent
-          getContentData={getContentData('heading', 1)}
+         <ImageContent
+          getContentData={getContentData('heading', 2)}
           contentWidth={`smaller`}
           figureWidth={`bigger`}
           alignment={`right`}
@@ -125,9 +125,10 @@ function App() {
           additionalClassDiv={`margin-top`}
         />
         <ImageContent
-          getContentData={getContentData('heading', 0)}
+          getContentData={getContentData('heading', 1)}
           contentWidth={`smaller`}
           figureWidth={`bigger`}
+          alignment={`left`}
           additionalClass={`gray-background`}
           additionalClassDiv={`margin-top`}
         />

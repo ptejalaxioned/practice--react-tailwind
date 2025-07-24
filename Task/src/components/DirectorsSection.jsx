@@ -15,35 +15,35 @@ const DirectorsSection = () => {
   {
     "name": "Nishant Pitti",
     "designation": "Co-founder",
-    "image":  `/rikant_r.png`,
+    "image":  `/nishant_n.png`,
     "description": "Mr. Nishant Pitti, Co-Founder of EaseMyTrip, is the visionary architect of the company's enduring success. He embarked on his entrepreneurial journey at the age of 16.",
     "link": "#"
   },
   {
     "name": "Prashant Pitti",
     "designation": "Co-founder",
-    "image":  `/rikant_r.png`,
+    "image":  `/Prashant_r.png`,
     "description": "Mr. Prashant Pitti, Co-founder of EaseMyTrip, led the company to the remarkable feat of bootstrapping its way to IPO success, positioning it among the select few.",
     "link": "#"
   },
   {
     "name": "Vinod Kumar Tripathi",
     "designation": "Independent Director",
-    "image":  `/rikant_r.png`,
+    "image":  `/vinod-tripathi.png`,
     "description": "Mr. Vinod Kumar Tripathi is an Independent Director of our Company and has been with us for years. He holds a bachelor's and a master's degree in political science.",
     "link": "#"
   },
   {
     "name": "Mrs. Neena Kumar",
     "designation": "Independent Director",
-    "image": `/rikant_r.png`,
+    "image": `/NeenaKumar.png`,
     "description": "She retired as Member Administration and Member Revenue of Central Board of Direct Taxes, Ministry of Finance, Government of India.",
     "link": "#"
   },
   {
     "name": "Mrs. Ruchi Ghanashyam",
     "designation": "Independent Director",
-    "image":  `/rikant_r.png`,
+    "image":  `/RuchiGhanashyam.png`,
     "description": "Mrs. Ruchi Ghanashyam joined the Indian Foreign Service in 1982. She is an Indian Diplomat who retired in April 2020 from her last position in the Indian Government.",
     "link": "#"
   }
@@ -53,20 +53,20 @@ const DirectorsSection = () => {
 		<section className="directors-section">
         <div className="wrapper">
 					 <WhiteBlueText text="Meet Our Board of Directors" />
-					 <div className="dirctors-list grid ">
-				{Directors_list.map((director, index) => (
-					<div className="director-card" key={index}>
-						<figure>
-							<img src={director.image} alt={director.name} />
-						</figure>
-						<div className="director-info">
-							<h3>{director.name}</h3>
-							<p className="designation">{director.designation}</p>
-							<p className="description">{director.description}</p>
-							<a href={director.link} className="read-more">Read More</a>		
-					 </div>
-					 </div>
-					 ))}
+					 <div className="dirctors-list grid grid-cols-2 gap-x-8 gap-y-10 pt-10">
+            {Directors_list.map((director, index) => (
+              <div className="director-card grid grid-cols-3 gap-5.5" key={index}>
+                <figure className='col-span-1'>
+                  <img src={director.image} alt={director.name} className='h-42 rounded-xl'/>
+                </figure>
+                <div className="director-info col-span-2">
+                  <h3>{director.name}</h3>
+                  <p className="designation">{director.designation}</p>
+                  <p className="description">{director.description}</p>
+                  <a href={director.link} className="read-more">Read More</a>		
+              </div>
+              </div>
+              ))}
 					 </div>
 				</div>
 		</section>
