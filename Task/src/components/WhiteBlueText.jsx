@@ -10,8 +10,8 @@ const WhiteBlueText = ({ text, colorClass }) => {
   const part2 = words.slice(midIndex).join(' ');
 
   return (
-    <h2 className="white-blue-text">
-      {part1} {part2 && <span className="blue-text">{part2}</span>}
+    <h2 className="white-blue-text text-center md:text-left">
+      {part1} {part2 && <span className="text-[#3498db]">{part2}</span>}
     </h2>
   );
 };

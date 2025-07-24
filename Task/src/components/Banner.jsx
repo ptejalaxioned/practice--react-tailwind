@@ -38,8 +38,8 @@ const Banner = ({ getContentData }) => {
               <img src={imageUrl} alt="Background Image" />
             </figure>
           )}
-          <div className="about-content">
-            {smallTitle && <h3 className="blue-text">{smallTitle}</h3>}
+          <div className="about-content w-11/12 xl:w-6/12 p-0 absolute z-1 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            {smallTitle && <h3 className="text-[#3498db]">{smallTitle}</h3>}
             <WhiteBlueText text={title} />
             {description && <p>{description}</p>}
           </div>
